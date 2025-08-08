@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/static/css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔍 HeapLens</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        {{template "content" .}}
+    </div>
+    
+    <footer>
+        <p>Generated at {{.CurrentTime}} | Dump: {{.DumpFile}}</p>
+    </footer>
+</body>
+</html>
+
+{{define "content"}}
+<div class="info">
+    <h2>Top Types Analysis</h2>
+    <p>Showing memory usage by type from heap dump: <strong>{{.DumpFile}}</strong></p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th class="sortable">
+                <a href="?sort=type&order={{if eq .SortBy "type"}}{{if eq .SortOrder "asc"}}desc{{else}}asc{{end}}{{else}}asc{{end}}">
+                    Type
+                </a>
+            </th>
+            <th class="sortable number">
+                <a href="?sort=count&order={{if eq .SortBy "count"}}{{if eq .SortOrder "asc"}}desc{{else}}asc{{end}}{{else}}desc{{end}}">
+                    Count
+                </a>
+            </th>
+            <th class="sortable number">
+                <a href="?sort=size&order={{if eq .SortBy "size"}}{{if eq .SortOrder "asc"}}desc{{else}}asc{{end}}{{else}}desc{{end}}">
+                    Total Size
+                </a>
+            </th>
+            <th class="number">Avg Size</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range .TopTypes}}
+        <tr>
+            <td><code>{{.Type}}</code></td>
+            <td class="number">{{.Count | printf "%d"}}</td>
+            <td class="number">{{.TotalSize | printf "%d"}} bytes</td>
+            <td class="number">{{.AvgSize | printf "%d"}} bytes</td>
+        </tr>
+        {{end}}
+    </tbody>
+</table>
+{{end}}
