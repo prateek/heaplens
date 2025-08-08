@@ -353,7 +353,7 @@ Acceptance:
 Integration: Add to algorithm suite
 ```
 
-### Step 8: Retained Size
+### Step 8: Retained Size ✅ COMPLETED
 ```text
 Context: Have dominators, need retained size
 Task: Calculate retained memory per object
