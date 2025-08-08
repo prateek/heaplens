@@ -36,7 +36,7 @@
 - [x] Step 7: Integration tests (2h)
 
 ### Increment 2: Bicycle (Week 1.5)
-- [ ] Step 8: Dominators algorithm (4h)
+- [x] Step 8: Dominators algorithm (4h) ✅
 - [ ] Step 9: Retained size (2h)
 - [ ] Step 10: Type aggregation (2h)
 - [ ] Step 11: CLI framework (1h)
