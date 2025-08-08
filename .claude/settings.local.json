@@ -6,7 +6,18 @@
       "Bash(git commit:*)",
       "Bash(go mod init:*)",
       "Bash(go test:*)",
-      "Bash(go mod:*)"
+      "Bash(go mod:*)",
+      "Bash(go run:*)",
+      "Bash(go build:*)",
+      "Bash(./heaplens:*)",
+      "Bash(mv:*)",
+      "Bash(pkill:*)",
+      "WebFetch(domain:go.dev)",
+      "WebFetch(domain:golang.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl:*)",
+      "Bash(go fmt:*)",
+      "Bash(go vet:*)"
     ],
     "deny": []
   }
