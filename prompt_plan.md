@@ -166,7 +166,7 @@
 
 ## Prompt Pack for Code-Gen LLM (TDD)
 
-### Step 1: Project Setup
+### Step 1: Project Setup ✅ COMPLETED
 ```text
 Context: New Go project for heap dump analysis tool
 Task: Initialize HeapLens project structure
@@ -190,7 +190,7 @@ Acceptance:
 Integration: Foundation for all future work
 ```
 
-### Step 2: Core Data Model
+### Step 2: Core Data Model ✅ COMPLETED
 ```text
 Context: Project initialized, need object graph model
 Task: Create graph data structures
@@ -213,7 +213,7 @@ Acceptance:
 Integration: Import in main package, verify compilation
 ```
 
-### Step 3: Parser Registry
+### Step 3: Parser Registry ✅ COMPLETED
 ```text
 Context: Have graph model, need parser plugin system
 Task: Implement parser interface and registry
@@ -237,7 +237,7 @@ Acceptance:
 Integration: Wire to graph package
 ```
 
-### Step 4: JSON Parser
+### Step 4: JSON Parser ✅ COMPLETED
 ```text
 Context: Have parser system, need test data loader
 Task: Build JSON stub parser
@@ -261,7 +261,7 @@ Acceptance:
 Integration: Register in init(), test with Open()
 ```
 
-### Step 5: Paths Algorithm
+### Step 5: Paths Algorithm ✅ COMPLETED
 ```text
 Context: Can load graphs, need analysis algorithms
 Task: Implement BFS paths-to-roots
@@ -285,7 +285,7 @@ Acceptance:
 Integration: Callable from main package
 ```
 
-### Step 6: CLI Paths Command
+### Step 6: CLI Paths Command ✅ COMPLETED
 ```text
 Context: Have paths algorithm, need CLI interface
 Task: Create CLI with paths subcommand
@@ -309,7 +309,9 @@ Acceptance:
 Integration: First user-facing feature complete
 ```
 
-### Step 7: Dominators Algorithm
+### Step 7: Integration Tests ✅ COMPLETED
+
+### Step 8: Dominators Algorithm
 ```text
 Context: Have basic analysis, need dominators
 Task: Implement Lengauer-Tarjan algorithm
