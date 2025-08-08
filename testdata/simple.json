@@ -1,0 +1,35 @@
+{
+  "objects": [
+    {
+      "id": 1,
+      "type": "root",
+      "size": 100,
+      "ptrs": [2, 3]
+    },
+    {
+      "id": 2,
+      "type": "string",
+      "size": 50,
+      "ptrs": []
+    },
+    {
+      "id": 3,
+      "type": "array",
+      "size": 200,
+      "ptrs": [4, 5]
+    },
+    {
+      "id": 4,
+      "type": "element",
+      "size": 30,
+      "ptrs": []
+    },
+    {
+      "id": 5,
+      "type": "element",
+      "size": 30,
+      "ptrs": []
+    }
+  ],
+  "roots": [1]
+}
